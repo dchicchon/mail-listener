@@ -1,7 +1,7 @@
 {
-  "name": "mail-listener6",
+  "name": "mail-listener",
   "version": "2.0.4",
-  "description": "Mail listener library for node.js. Get notification when new email arrived.",
+  "description": "Mail listener library",
   "dependencies": {
     "async": "^2.6.2",
     "imap": "^0.8.19",
@@ -9,26 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vijayakumarit/mail-listener6.git"
+    "url": "git+https://github.com/dchicchon/mail-listener.git"
   },
-  "homepage": "https://github.com/vijayakumarit/mail-listener6",
+  "homepage": "https://github.com/dchicchon/mail-listener",
   "keywords": [
     "mail",
-    "job",
     "imap",
-    "mail listener",
-    "mail listener2",
-    "mail listener3",
-    "mail listener4",
-    "email",
-    "email parser",
-    "node imap",
-    "mail parser"
+    "email"
   ],
   "author": "Vijayakumar",
+  "contributors": [
+    "dchicchon"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MatejMalicek/mail-listener2/issues"
+    "url": "https://github.com/dchicchon/mail-listener/issues"
   },
   "main": "index.js",
   "scripts": {

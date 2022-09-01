@@ -1,9 +1,8 @@
 # Overview
 
-Mail-listener6 library for node.js. Get notification when new email arrived to inbox or when message metadata (e.g. flags) changes externally. Uses IMAP protocol.
+Mail-listener library for node.js. Get notifications when new email arrived to inbox or when message metadata (e.g. flags) changes externally. Uses IMAP protocol.
 
 ## Version Notes
-THIS PACKAGE IS STILL UNDERGOING MORE THOROUGH TESTING AND IMPROVEMENT. Expect further commits as functionality is added. :-)
 
 This package has several improvements and fixes over the mail-listener6. Most of the improvements are designed to improve security & usability, plus avoid deprecation warnings. The previous mail-listener packages used a now-deprecated version of MailParser and unsafe buffer constructors (see change notes below).
 
@@ -30,7 +29,7 @@ A future version will reintroduce this capability once the refactoring is comple
 
 Install
 
-`npm install mail-listener6`
+`npm install @dchicchon/mail-listener`
 
 
 JavaScript Code:
@@ -38,7 +37,7 @@ JavaScript Code:
 
 ```javascript
 
-var { MailListener } = require("mail-listener6");   // NOTE: A FUTURE VERSION (release date TBA) will not require ES6 destructuring or referring to the class after the require statement (i.e. require('mail-listener6').MailListener). At this stage, this is necessary because index.js exports the MailListener class as a property of module.exports.
+var { MailListener } = require("mail-listener");   // NOTE: A FUTURE VERSION (release date TBA) will not require ES6 destructuring or referring to the class after the require statement (i.e. require('mail-listener6').MailListener). At this stage, this is necessary because index.js exports the MailListener class as a property of module.exports.
 
 var mailListener = new MailListener({
   username: "imap-username",
@@ -99,8 +98,6 @@ mailListener.on("mail", function(mail, seqno) {
 mailListener.imap.move(:msguids, :mailboxes, function(){})
 
 ```
-
-That's easy!
 
 ## Attachments
 Attachments in this version are buffered. This feature is based on how [mailparser](https://github.com/andris9/mailparser#attachments)'s simpleParser function handles attachments.
