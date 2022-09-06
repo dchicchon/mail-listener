@@ -99,7 +99,7 @@ class MailListener extends EventEmitter {
           results,
           (result, callback) => {
             if (this.queue[result]) return;
-            this.queue[result] = this.queue;
+            this.queue[result] = result;
             let f = this.imap.fetch(result, {
               bodies: "",
               markSeen: this.markSeen,
