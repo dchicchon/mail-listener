@@ -1,6 +1,6 @@
 {
   "name": "@dchicchon/mail-listener",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Mail listener library",
   "dependencies": {
     "async": "^2.6.2",
